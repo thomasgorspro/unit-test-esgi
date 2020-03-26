@@ -20,4 +20,7 @@ describe('Calculator suite', () => {
     it('should return the average of the numbers', () => {
         assert.equal(calculator.avg([1, 3, 7, 12]), 5.75);
     });
+    it('should not average an empty array', () => {
+        assert.equal(calculator.avg([]), undefined);
+    });
 });

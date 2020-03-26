@@ -11,14 +11,16 @@ function div(a, b) {
     return a / b;
 }
 function avg(tab) {
-    return tab.reduce((acc, value, index, array) => {
-        acc += value;
-        return index === array.length-1
-            ? acc/array.length
-            : acc;
-    });
+    if (tab.length) {
+        return tab.reduce((acc, value, index, array) => {
+            acc += value;
+            return index === array.length-1
+                ? acc/array.length
+                : acc;
+        });
+    }
 }
-
+console.log(avg([]));
 module.exports = {
     add: add,
     sub: sub,
